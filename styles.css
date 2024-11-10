@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+main {
+    padding: 50px 0;
+}
+
+#hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#hero h1 {
+    color: #222;
+    margin-bottom: 20px;
+}
+
+#hero button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    padding: 12px 24px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    color: white;
+}
+
+#services {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.service img {
+    width: 80px;
+}
+
+.service h3 {
+    text-align: left;
+    line-height: 32px;
+}
+
+.profile {
+    max-width: 700px;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 25px;
+    grid-template-areas: 'image info';
+    margin: auto;
+}
+
+.profile img {
+    grid-area: image;
+    width: 200px;
+}
+
+.profile div {
+    grid-area: info;
+}
+
+.project {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transform: translateZ(0);
+    transition: transform 0.3s cubic-bezier(.165,.84,.44,1),box-shadow 0.3s;
+    will-change: transform,box-shadow;
+    backface-visibility: hidden;
+}
+
+.project:hover,
+.project:focus-within {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)!important;
+}
+
+.project img {
+    object-fit: cover;
+    height: 300px;
+}
+
+.project h2 {
+    margin: 10px 0;
+}
+
+.project a {
+    float: right;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #eaeaea;
+    color: black;
+    padding: 15px;
+    text-align: center;
+}
